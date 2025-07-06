@@ -10,7 +10,7 @@ const Home = () => {
   const [title, setTitle] = useState("");
   const [searchParams, setSearchParams] = useSearchParams(); // Destructure useSearchParams
   const noteId = searchParams.get("noteId"); // Get pasteId from the search params
-  const notes = useSelector((state) => state.note.notes);
+  const notes = useSelector((state) => state.note.note);
   const dispatch = useDispatch();
 
   const createNote = () => {
@@ -67,7 +67,7 @@ const Home = () => {
             // Dynamic width based on whether pasteId is present
             className={`${
               noteId ? "w-[80%]" : "w-[85%]"
-            } text-black border border-input rounded-md p-2`}
+            } text-white placeholder-white border border-input rounded-md p-2`}
           />
           <button
             className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700"
@@ -113,7 +113,7 @@ const Home = () => {
                   });
                 }}
               >
-                <Copy className="group-hover:text-sucess-500" size={20} />
+                <Copy className="group-hover:text-success-500" size={20} />
               </button>
             </div>
           </div>

@@ -6,7 +6,7 @@ import { removeFromNotes } from "../redux/noteSlice";
 import { FormatDate } from "../utlis/formatDate";
 
 const Notes = () => {
-  const notes = useSelector((state) => state.note.notes);
+  const notes = useSelector((state) => state.note.note);
   const dispatch = useDispatch();
   const [searchTerm, setSearchTerm] = useState(""); // State to hold the search term
 
