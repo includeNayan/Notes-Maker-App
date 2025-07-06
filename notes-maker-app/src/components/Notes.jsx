@@ -62,7 +62,7 @@ const Notes = () => {
                       >
                         <a href={`/?noteId=${note?._id}`}>
                           <PencilLine
-                            className="text-black group-hover:text-blue-500"
+                            className="text-black dark:text-white group-hover:text-blue-500 dark:group-hover:text-blue-300"
                             size={20}
                           />
                         </a>
@@ -72,7 +72,7 @@ const Notes = () => {
                         onClick={() => handleDelete(note?._id)}
                       >
                         <Trash2
-                          className="text-black group-hover:text-pink-500"
+                          className="text-black dark:text-white group-hover:text-pink-500"
                           size={20}
                         />
                       </button>
@@ -80,7 +80,7 @@ const Notes = () => {
                       <button className="p-2 rounded-[0.2rem] bg-white border border-[#c7c7c7]  hover:bg-transparent group hover:border-orange-500">
                         <a href={`/notes/${note?._id}`} target="_blank">
                           <Eye
-                            className="text-black group-hover:text-orange-500"
+                            className="text-black dark:text-white group-hover:text-orange-500"
                             size={20}
                           />
                         </a>
@@ -93,7 +93,7 @@ const Notes = () => {
                         }}
                       >
                         <Copy
-                          className="text-black group-hover:text-green-500"
+                          className="text-black dark:text-white group-hover:text-green-500"
                           size={20}
                         />
                       </button>
